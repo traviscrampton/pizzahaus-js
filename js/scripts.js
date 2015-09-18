@@ -70,28 +70,50 @@ $(document).ready(function(){
         pizzaPrice += 6;
       } else {
         pizzaPrice;
-      } debugger;
+      }
 
-      //pizza with  meat price
+      //Pizza With Meat Price
 
-      // if ((newPizza.pizzaSize === "Small") && (meatArray.indexOf("None") === (-1))) {
-      //   pizzaPrice += meatArray.length;
-      // }
-      //
-      // if ((newPizza.pizzaSize === "Medium") && (meatArray.indexOf("None") === (-1))) {
-      //   pizzaPrice += (meatArray.length*1.40)
-      // }
-      //
-      // if ((newPizza.pizzaSize === "Large") && (meatArray.indexOf("None") === (-1))) {
-      //   pizzaPrice += (meatArray.length*2)
-      // } else {
-      //   pizzaPrice += (meatArray.length -(1))
-      // } else
-      //
-      // else {
-      //   pizzaPrice += (meatArray.length - 1);
-      // }
-      //
+      if (newPizza.pizzaSize === "Small"){
+        pizzaPrice += (meatArray.length*2);
+      }
+
+      else if (newPizza.pizzaSize === "Medium") {
+        pizzaPrice += (meatArray.length*3)
+      }
+
+      else if (newPizza.pizzaSize === "Large") {
+        pizzaPrice += (meatArray.length*4)
+      } else {
+        alert("How Did You Do That?!")
+      }
+
+      //Pizza With Non-Meat Price
+
+      if (newPizza.pizzaSize === "Small"){
+        pizzaPrice += (nonMeatArray.length);
+      }
+
+      else if (newPizza.pizzaSize === "Medium") {
+        pizzaPrice += (nonMeatArray.length*2)
+      }
+
+      else if (newPizza.pizzaSize === "Large") {
+        pizzaPrice += (nonMeatArray.length*3)
+      } else {
+        alert("How Did You Do That?!")
+      }
+
+      if (newPizza.pizzaQuantity > 1) {
+        pizzaPrice *= newPizza.pizzaQuantity;
+      } else {
+        pizzaPrice;
+      }
+
+      alert("your total purchase costs" + " " + pizzaPrice + " dollars")
+
+
+
 
 
 
