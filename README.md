@@ -19,7 +19,9 @@ Looking to use the drop down choose between pizza sizing and pricing
 also appending another drop down menu when users want to add another
 topping.
 
-meat toppings: Pepperoni, Sausage, Meatball, Chicken, Bacon, Linguiça, Canadian Bacon, Ham, Salami, Anchovie
+meat toppings In Order: Anchovy, Bacon, Canadian Bacon, Chicken, Ham, Linguiça, Meatball,  Pepperoni, Salami, Sausage
 
-non-meat toppings: Pineapple, Garlic, Onion, Fresh Tomato, Sundried Tomato, Basil, Bell Pepper, Olive, Extra Cheese, Mushroom, Jalapeno.
+non-meat Toppings In Order: None, Basil, Bell Pepper, Extra Cheese, Garlic, Jalapeno, Mushroom, Olive, Onion, Pineapple, Fresh Tomato, Sundried Tomato
+
+
 Thoughts: Once each topping is collected, push the value into an array and when calculating price it'll be easy just to count the number of items in an array. As Meat and NonMeat have different prices.
