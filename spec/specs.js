@@ -7,10 +7,16 @@ describe('Pizza', function(){
   });
 });
 
-describe('Topping', function() {
-  it("creates new toppings on a pizza", function(){
-    var testTopping = new Topping("Pepperoni", "Pineapple");
-    expect(testTopping.meat).to.eq("Pepperoni");
-    expect(testTopping.nonMeat).to.eq("Pineapple");
+describe('nonMeat', function() {
+  it("creates new non-meat option", function(){
+    var testNonMeat = new nonMeat("Pineapple");
+    expect(testNonMeat.veg).to.eq("Pineapple");
+  });
+});
+
+describe('meat', function() {
+  it("creates new non-meat option", function(){
+    var testMeat = new Meat("Pepperoni");
+    expect(testMeat.beef).to.eq("Pepperoni")
   });
 });

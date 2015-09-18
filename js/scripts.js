@@ -110,26 +110,21 @@ $(document).ready(function(){
         pizzaPrice;
       }
 
-      alert("your total purchase costs" + " " + pizzaPrice + " dollars")
-
-
-
-
-
-
-
-
-
-
 
 
       if (newPizza.pizzaQuantity > 1) {
-        $("ul#pizzas").append("<li><span class='pizza'>" + newPizza.pizzaQuantity + " " + newPizza.pizzaSize + " Pizzas" + "</span></li>")
+        $("ul#pizzas").append("<li><span class='pizza'>" + newPizza.pizzaQuantity + " " + newPizza.pizzaSize + " " + meatArray.join(", ") + ", " + nonMeatArray.join(", ") + " Pizzas" + "</span></li>")
     } else {
         $("ul#pizzas").append("<li><span class='pizza'>" + newPizza.pizzaQuantity + " " + newPizza.pizzaSize + " " + meatArray.join(", ") + ", " + nonMeatArray.join(", ") + " Pizza" + "</span></li>")
     };
 
+  $("ul#pizzas").click(function(){
+    alert("Your Total Cost is " + pizzaPrice + " dollars");
+
   });
+
+  });
+
 
 
 
