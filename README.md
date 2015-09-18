@@ -21,4 +21,5 @@ topping.
 
 meat toppings: Pepperoni, Sausage, Meatball, Chicken, Bacon, Linguiça, Canadian Bacon, Ham, Salami, Anchovie
 
-non-meat toppings: Pineapple, Garlic, Onion, Fresh Tomato, Sundried Tomato, Basil, Bell Pepper, Olive, Extra Cheese, Mushroom, Jalapeno. 
+non-meat toppings: Pineapple, Garlic, Onion, Fresh Tomato, Sundried Tomato, Basil, Bell Pepper, Olive, Extra Cheese, Mushroom, Jalapeno.
+Thoughts: Once each topping is collected, push the value into an array and when calculating price it'll be easy just to count the number of items in an array. As Meat and NonMeat have different prices.

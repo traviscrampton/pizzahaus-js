@@ -6,3 +6,11 @@ describe('Pizza', function(){
     expect(testPizza.toppings).to.eql([]);
   });
 });
+
+describe('Topping', function() {
+  it("creates new toppings on a pizza", function(){
+    var testTopping = new Topping("Pepperoni", "Pineapple");
+    expect(testTopping.meat).to.eq("Pepperoni");
+    expect(testTopping.nonMeat).to.eq("Pineapple");
+  });
+});
