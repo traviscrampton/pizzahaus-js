@@ -54,6 +54,35 @@ $(document).ready(function(){
         meatArray.push(selectedMeat);
       });
 
+      var pizzaPrice = 8;
+
+      if (newPizza.pizzaSize === "Medium") {
+        pizzaPrice += 4;
+      } else if (newPizza.pizzaSize === "Large"){
+        pizzaPrice += 6;
+      } else {
+        pizzaPrice;
+      }
+
+      //pizza with  meat price
+
+      if ((newPizza.pizzaSize === "Small") && (meatArray.indexOf("None") === (-1))) {
+        pizzaPrice += meatArray.length;
+        debugger;
+      } else {
+        pizzaPrice += (meatArray.length - 1);
+      }
+
+      alert(pizzaPrice);
+
+
+
+
+
+
+
+
+
       if (newPizza.pizzaQuantity > 1) {
         $("ul#pizzas").append("<li><span class='pizza'>" + newPizza.pizzaQuantity + " " + newPizza.pizzaSize + " Pizzas" + "</span></li>")
     } else {
