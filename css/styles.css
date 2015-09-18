@@ -1,0 +1,8 @@
+.pizza{
+  cursor: pointer;
+  color: red;
+}
+
+.pizza:hover{
+  text-decoration: underline;
+}

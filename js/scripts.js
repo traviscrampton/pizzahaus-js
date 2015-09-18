@@ -31,30 +31,34 @@ $(document).ready(function(){
     );
   });
 
-  $("form#quantity-size").submit(function(event) {
-    event.preventDefault();
+    $("form#quantity-size").submit(function(event) {
+      event.preventDefault();
 
 
-    var selectedSize = $("select#pizzaSize option:selected").val();
-    var selectedQuantity = parseInt($("select#quantity option:selected").val());
+      var selectedSize = $("select#pizzaSize option:selected").val();
+      var selectedQuantity = parseInt($("select#quantity option:selected").val());
 
-    var newPizza = new Pizza(selectedSize, selectedQuantity);
+      var newPizza = new Pizza(selectedSize, selectedQuantity);
 
-    $(".new-nonMeat").each(function() {
-      var selectedNonMeat = $(this).find("select.nonMeat option:selected").val();
-      var newVeg = new nonMeat(selectedNonMeat);
-      newPizza.toppings.push(newVeg);
-      nonMeatArray.push(selectedNonMeat);
-    });
+      $(".new-nonMeat").each(function() {
+        var selectedNonMeat = $(this).find("select.nonMeat option:selected").val();
+        var newVeg = new nonMeat(selectedNonMeat);
+        newPizza.toppings.push(newVeg);
+        nonMeatArray.push(selectedNonMeat);
+      });
 
-    $(".new-meat").each(function(){
-      var selectedMeat = $(this).find("select.meat option:selected").val();
-      var newBeef = new Meat(selectedMeat);
-      newPizza.toppings.push(newBeef);
-      meatArray.push(selectedMeat);
-      debugger;
+      $(".new-meat").each(function(){
+        var selectedMeat = $(this).find("select.meat option:selected").val();
+        var newBeef = new Meat(selectedMeat);
+        newPizza.toppings.push(newBeef);
+        meatArray.push(selectedMeat);
+      });
 
-    });
+      if (newPizza.pizzaQuantity > 1) {
+        $("ul#pizzas").append("<li><span class='pizza'>" + newPizza.pizzaQuantity + " " + newPizza.pizzaSize + " Pizzas" + "</span></li>")
+    } else {
+        $("ul#pizzas").append("<li><span class='pizza'>" + newPizza.pizzaQuantity + " " + newPizza.pizzaSize + " " + meatArray.join(", ") + ", " + nonMeatArray.join(", ") + " Pizza" + "</span></li>")
+    };
 
   });
 
